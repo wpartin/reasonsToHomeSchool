@@ -15,7 +15,6 @@ body {
 }
 
 header {
-  background-color: #ccc;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -27,13 +26,17 @@ header img {
   width: 100px;
 }
 
+header nav {
+  display: none;
+}
+
 header nav ul {
   list-style-type: none;
   display: flex;
 }
 
 header nav ul li {
-  margin-left: 2rem;
+  margin-left: 2.5rem;
 }
 
 header nav ul li a {
@@ -42,7 +45,66 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
+  padding-bottom: 0.25rem;
   border-bottom: 2px solid violet;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  background-color: #fff;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu ul li {
+  margin-bottom: 2rem;
+}
+
+.menu ul li a {
+  font-size: 110%;
+  text-decoration: none;
+  color: #000;
+}
+
+.menu ul li a:hover {
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid violet;
+}
+
+.menu-button {
+  cursor: pointer;
+}
+
+.menu-button img {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  height: 45px;
+  width: 45px;
+}
+
+.menu-button .open {
+  z-index: 30;
+}
+
+.menu-button .close {
+  display: none;
+  z-index: 30;
 }
 
 /* MAIN */
@@ -83,16 +145,21 @@ header nav ul li a:hover {
 
 footer {
   height: 100px;
-  background-color: #ccc;
+  background-color: rgb(165, 238, 214);
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 0 2rem;
   font-size: 85%;
 }
 
 footer a {
   margin-left: 2rem;
+}
+
+footer a:first-child {
+  margin-left: 0;
 }
 
 footer img {

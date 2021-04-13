@@ -2,9 +2,20 @@
   header {
     padding: 1rem 2rem;
   }
+  header nav {
+    display: flex;
+  }
   .text-box {
     padding: 2rem 4rem;
     line-height: 2.5rem;
+    max-width: 765px;
+  }
+  .menu-button {
+    display: none;
+  }
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 
